@@ -1,0 +1,227 @@
+/* /*media query break point at 1300px */
+@media (max-width: 81.25em) {
+  .heading-primary {
+    font-size: 4.1rem;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-third {
+    font-size: 2.4rem;
+  }
+}
+
+/* tablet landscape  mode. 
+media query break point at 1120px */
+@media (max-width: 70em) {
+  html {
+    /* font-size 9px */
+    font-size: 56.2%;
+  }
+  .main-header {
+    padding: 3.2rem;
+  }
+  .heading-secondary {
+    font-size: 3.4rem;
+  }
+  .diet-info {
+    padding: 2rem;
+  }
+  .grid {
+    column-gap: 3.2rem;
+    row-gap: 4.8rem;
+  }
+  .img-container {
+    grid-template-columns: 1fr 1fr;
+    /* gap: 1rem; */
+  }
+  .pricing-plan {
+    width: 80%;
+  }
+}
+
+/* tablet portrait mode. 
+media query break point at 910px */
+@media (max-width: 56.8em) {
+  html {
+    font-size: 50%;
+  }
+  .hero-grid {
+    text-align: center;
+    grid-template-columns: 1fr;
+    row-gap: 9.6rem;
+  }
+  .delivered-meals {
+    justify-content: center;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .hero-text-box {
+    gap: 3.6rem;
+  }
+  .logo {
+    height: 2.6rem;
+  }
+  .step-number {
+    font-size: 7.6rem;
+  }
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    row-gap: 6.8rem;
+  }
+  .testimnial-blocks {
+    row-gap: 5rem;
+  }
+  .img-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 0px;
+  }
+  .cta-text-box {
+    padding: 2rem;
+  }
+  .heading-secondary {
+    font-size: 3.1rem;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .cta-form button {
+    margin-top: 2.4rem;
+  }
+  .mobile-nav-btn {
+    display: block;
+    z-index: 9999;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(250, 241, 233, 0.99);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  @keyframes navThing {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .nav-open .nav-container {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    animation: navThing 0.5s ease-in-out forwards;
+  }
+  .nav-open ion-icon[name="menu-outline"] {
+    display: none;
+  }
+  .nav-open ion-icon[name="close-outline"] {
+    display: block;
+  }
+  nav {
+    flex-direction: column;
+    font-size: 3rem;
+  }
+}
+
+/*  for small tablets
+media query break point at 720px */
+@media (max-width: 45em) {
+  html {
+    font-size: 47%;
+  }
+  .meals-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .diet-info {
+    grid-column: 1/-1;
+    background-color: #fdf0e4;
+    justify-self: center;
+    padding: 5rem;
+    border-radius: 2rem;
+    margin-top: 2.4rem;
+  }
+  .step-text-box {
+    padding-top: 3rem;
+  }
+  .heading-secondary {
+    margin-bottom: 5rem;
+  }
+  .pricing-plan {
+    width: 100%;
+    padding: 2.2rem;
+  }
+  .grid--col-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid--col-5 {
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 8.8rem;
+  }
+  .footer-account-container,
+  .footer-company-container,
+  .footer-resources-container {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  .footer-logo-container,
+  .footer-contact-container {
+    grid-row: 2;
+    grid-column: span 3;
+  }
+}
+
+/*  for mobile phones
+media query break point at 520px */
+@media (max-width: 33em) {
+  .grid--col-2,
+  .grid--col-3,
+  .grid--col-4,
+  .testimnial-blocks,
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 0 2rem;
+  }
+  .logo {
+    width: 15%;
+    height: 2.5rem;
+  }
+  .step-img-box {
+    transform: translateY(4rem);
+  }
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+  .meal-card {
+    width: 80%;
+    margin: auto;
+  }
+  .img-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .pricing-plan {
+    width: 70%;
+    justify-self: center;
+  }
+  .cta-img-box {
+    height: 37rem;
+    grid-row: 1;
+  }
+}
